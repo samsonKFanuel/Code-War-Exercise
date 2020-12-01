@@ -7,8 +7,7 @@ function toCamelCase(str){
         strArr[i+1] = strArr[i+1].toUpperCase();
       }
     }
-    const newStr = strArr.join('').replace(/-|_/g, '');
-    return newStr;
+    return strArr.join('').replace(/-|_/g, '');
   }
 
 const assert = require('assert').strict;
