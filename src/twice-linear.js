@@ -1,43 +1,14 @@
-const compare = (a, b) => {
-    if(a < b) {
-        return -1;
-    }
-    else if(a > b) {
-        return 1;
-    }
-    return 0;
-};
-
 const dblLinear = (n) => {
-    const u = [1];
-    var curr = 1;
-    const used = [];
-    
-    do {
-        const y = 2 * curr + 1;
-        const z = 3 * curr + 1;
-        
-        const len = u.length;
-        if(len >= n + 1 && y >= u[n]) {
-            return u[n];
-        }
-        
-        !u.includes(y) && u.push(y);
-        !u.includes(z) && u.push(z);
-        used.push(curr);
-        u.sort(compare);
-        
-
-        const pos = used.length;
-        if(JSON.stringify(u.slice(0, pos)) !== JSON.stringify(used)) {
-            curr = u.slice(0, pos).filter(x => used.includes(x)); 
-        }
-        else {
-            curr = u[pos]
-        }
-        count++;
-
-    } while(true);
+    var ai = 0, bi = 0, eq = 0;
+    const sequence = [1];
+    while (ai + bi < n + eq) {
+        const y = 2 * sequence[ai] + 1;
+        const z = 3 * sequence[bi] + 1;
+        if (y < z) { sequence.push(y); ai++; }
+        else if (y > z) { sequence.push(z); bi++; }
+        else { sequence.push(y); ai++; bi++; eq++; }
+    }
+    return sequence.pop();
 }
 
 const assert = require('assert').strict;
