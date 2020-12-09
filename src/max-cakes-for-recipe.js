@@ -13,7 +13,7 @@ This function takes "recipe" and "available ingredients" both as objects as para
 
 const cakes = (recipe, available) => {
     const maxOfEach = Object.keys(recipe).map(key => {
-      if(recipe[key] && available[key]) {
+      if(available[key]) {
         return Math.floor(available[key] / recipe[key]);
       }
       return 0;
