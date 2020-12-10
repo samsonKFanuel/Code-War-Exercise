@@ -12,7 +12,7 @@ Given a word that may or may not end with number/s
 * incrementString('Test') should return Test1
 
 #### Attention:
-0's at the end of the number should be considered.
+0's at the begining of the number should be considered.
 
 #### Example
  * incrementString('Test0099') should return Test0100
