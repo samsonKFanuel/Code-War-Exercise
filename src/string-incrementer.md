@@ -1,20 +1,29 @@
-<b>Description</b>
-Given a word that may or may not end with number/s or digit/s
+<h4>Description</h4>
+<p>Given a word that may or may not end with number/s or digit/s</p>
 
-Task:
-If there is number at the end of the string increment by 1
-If not add (concatenate) the number '1' to the end.
+<h3>Task:</h3>
+<ol>
+<li>If there is number at the end of the string increment by 1 </li>
+<li> If not add (concatenate) the number '1' to the end. </li>
+</ol>
 
-Task: Given parameter n the function dbl_linear (or dblLinear...) returns the element u(n) of the ordered (with <) sequence u.
+<h4>Example:</h4> 
+<ol>
+<li>incrementString('Test10') should return Test11 </li>
+<li>incrementString('Test') should return Test1</li>
+</ol>
 
-Example: incrementString('Test10') should return Test11
-         incrementString('Test') should return Test1
+<h4>Attention: </h4>
+<p> 0's at the end of the number should be considered. </p>
 
-Attention: 0's at the end of the number should be considered.
-Example incrementString('Test0099') should return Test0100
-        incrementString('Test0094') should return Test0095
+<p> Example
+ <ol>
+ <li>incrementString('Test0099') should return Test0100</li>
+ <li>incrementString('Test0094') should return Test0095</li>
+ </li>
 
-Kata's link: Increment String
+<h3>Kata's link: Increment String </h3>
+<hr />
 
 ```javascript
 const isNumber = (ch) => /\d/.test(ch);
