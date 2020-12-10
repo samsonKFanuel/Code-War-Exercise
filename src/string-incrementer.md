@@ -18,7 +18,7 @@ Given a word that may or may not end with number/s
  * incrementString('Test0099') should return Test0100
  * incrementString('Test0094') should return Test0095
 
-<hr />
+(***)
 
 ```javascript
 const isNumber = (ch) => /\d/.test(ch);
