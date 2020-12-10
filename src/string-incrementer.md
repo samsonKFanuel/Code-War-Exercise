@@ -1,28 +1,23 @@
-<h4>Description</h4>
-<p>Given a word that may or may not end with number/s or digit/s</p>
+### Kata: 
+[String incrementer](https://www.codewars.com/kata/54a91a4883a7de5d7800009c)
+#### Description
+Given a word that may or may not end with number/s
 
-<h3>Task:</h3>
-<ol>
-<li>If there is number at the end of the string increment by 1 </li>
-<li> If not add (concatenate) the number '1' to the end. </li>
-</ol>
+#### Task:
+* If there is number at the end of the string increment by 1
+* If not add (concatenate) the number '1' to the end.
 
-<h4>Example:</h4> 
-<ol>
-<li>incrementString('Test10') should return Test11 </li>
-<li>incrementString('Test') should return Test1</li>
-</ol>
+#### Example: 
+* incrementString('Test10') should return Test11
+* incrementString('Test') should return Test1
 
-<h4>Attention: </h4>
-<p> 0's at the end of the number should be considered. </p>
+#### Attention:
+0's at the end of the number should be considered.
 
-<p> Example
- <ol>
- <li>incrementString('Test0099') should return Test0100</li>
- <li>incrementString('Test0094') should return Test0095</li>
- </li>
+#### Example
+ * incrementString('Test0099') should return Test0100
+ * incrementString('Test0094') should return Test0095
 
-<h3>Kata's link: Increment String </h3>
 <hr />
 
 ```javascript
