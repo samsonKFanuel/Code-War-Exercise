@@ -1,4 +1,4 @@
-Description
+<b>Description</b>
 Given a word that may or may not end with number/s or digit/s
 
 Task:
@@ -16,7 +16,7 @@ Example incrementString('Test0099') should return Test0100
 
 Kata's link: Increment String
 
-
+```javascript
 const isNumber = (ch) => /\d/.test(ch);
 
 const incrementString = (strng) => {
@@ -39,6 +39,7 @@ const incrementString = (strng) => {
     else return strng + 1;
 }
 
+
 const assert = require('assert').strict;
 
 assert.equal(incrementString('Test'), 'Test1');
@@ -47,3 +48,4 @@ assert.equal(incrementString('Test1000'), 'Test1001');
 assert.equal(incrementString('Test99'), 'Test100');
 assert.equal(incrementString('Test099'), 'Test100');
 assert.equal(incrementString('Test0099'), 'Test0100');
+```
