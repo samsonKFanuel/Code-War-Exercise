@@ -1,4 +1,5 @@
-### Sum Strings as Numbers
+### Kata:
+Sum Strings as Numbers
 
 #### Description
 calculates the sum of two integers given as strings
