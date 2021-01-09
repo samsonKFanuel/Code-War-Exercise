@@ -21,58 +21,23 @@ with the p(i) in increasing order and n(i) empty if n(i) is 1.
 
 ```javascript
 const primeFactors = (n) => {
-  var i = 2;
-  const primeFactors = {};
+  var i = 2,
+    factors = "";
 
   do {
-    if (n % i === 0) {
+    var count = 0;
+    while (n % i === 0) {
       n = n / i;
-
-      if (primeFactors[i]) {
-        primeFactors[i] += 1;
-      } else {
-        primeFactors[i] = 1;
-      }
-    } else {
-      var k = i + 1,
-        isTherePrime = false,
-        maxPrime = Math.floor(n / 2);
-
-      while (k < maxPrime && !isTherePrime) {
-        var count = 0,
-          j = 2;
-
-        while (j < k / 2 && count !== 0) {
-          if (k % j === 0) {
-            count += 1;
-          }
-          j++;
-        }
-
-        if (count) {
-          k++;
-        } else {
-          isTherePrime = true;
-        }
-      }
-
-      if (isTherePrime) {
-        i = k;
-      } else {
-        i = n;
-      }
+      count++;
     }
+
+    if (count) {
+      factors += "(" + i + (count === 1 ? "" : "**" + count) + ")";
+    }
+    i++;
   } while (n > 1);
 
-  return Object.keys(primeFactors)
-    .map((k) => {
-      const count = primeFactors[k];
-      if (count === 1) {
-        return "(" + k + ")";
-      }
-      return "(" + k + "**" + count + ")";
-    })
-    .join("");
+  return factors;
 };
 
 const assert = require("assert").strict;
